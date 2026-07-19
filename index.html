@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Ctext x='6' y='22' font-family='monospace' font-size='16' fill='%233fb950'%3E%3E_%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
@@ -20,10 +21,10 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="tabs" id="tabs">
-      <a class="tab" href="#about">about.md</a>
-      <a class="tab" href="#projects">projects/</a>
-      <a class="tab" href="#skills">skills.json</a>
-      <a class="tab" href="#contact">contact.sh</a>
+      <a class="tab" href="#about" data-tab="about">about.md</a>
+      <a class="tab" href="#projects" data-tab="projects">projects/</a>
+      <a class="tab" href="#skills" data-tab="skills">skills.json</a>
+      <a class="tab" href="#contact" data-tab="contact">contact.sh</a>
     </nav>
   </div>
 </header>
@@ -38,6 +39,9 @@
         <span class="window-title">bash</span>
       </div>
       <div class="window-body">
+        <div class="avatar" id="avatar">
+          <img src="avatar.jpg" alt="Ali Sher">
+        </div>
         <p class="line"><span class="prompt">$</span> whoami</p>
         <h1 class="hero-name">Ali Sher</h1>
         <p class="hero-role"><span id="typedRole"></span><span class="cursor">_</span></p>
@@ -50,7 +54,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section reveal" id="about">
     <p class="file-label">// about.md</p>
     <h2># About</h2>
     <div class="prose">
@@ -64,7 +68,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="section" id="projects">
+  <section class="section reveal" id="projects">
     <p class="file-label">// projects/</p>
     <h2># Projects</h2>
     <div class="project-grid">
@@ -108,7 +112,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section class="section" id="skills">
+  <section class="section reveal" id="skills">
     <p class="file-label">// skills.json</p>
     <h2># Skills</h2>
     <pre class="code-block"><code><span class="punct">{</span>
@@ -122,13 +126,13 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section class="section reveal" id="contact">
     <p class="file-label">// contact.sh</p>
     <h2># Get in touch</h2>
     <pre class="code-block contact-block"><code><span class="comment">#!/bin/bash</span>
 <span class="key">echo</span> <span class="str">"Let's build something."</span>
 
-<!-- TODO: replace with your real email --><span class="key">email   </span><span class="punct">=</span> <a class="link-inline" id="emailLink" href="mailto:you@example.com">you@example.com</a> <button class="copy-btn" id="copyEmail" type="button">copy</button>
+<span class="key">email   </span><span class="punct">=</span> <a class="link-inline" id="emailLink" href="mailto:shery78651214@gmail.com">shery78651214@gmail.com</a> <button class="copy-btn" id="copyEmail" type="button">copy</button>
 github  <span class="punct">=</span> <a class="link-inline" href="https://github.com/ali-sher-makki" target="_blank" rel="noopener">github.com/ali-sher-makki</a>
 linkedin<span class="punct">=</span> <a class="link-inline" href="https://www.linkedin.com/in/ali-sher-0a2a78266" target="_blank" rel="noopener">linkedin.com/in/ali-sher</a></code></pre>
   </section>

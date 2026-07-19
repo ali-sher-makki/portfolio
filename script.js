@@ -69,3 +69,43 @@ if (copyBtn && emailLink) {
 // ---- Footer year ----
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ---- Scroll reveal ----
+const revealEls = document.querySelectorAll('.reveal');
+if (revealEls.length && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add('in-view'));
+}
+
+// ---- Active nav tab on scroll ----
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.tab[data-tab]');
+
+if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
+  const tabObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach((link) => {
+            link.classList.toggle('active', link.dataset.tab === id);
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+  sections.forEach((section) => tabObserver.observe(section));
+}
