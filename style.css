@@ -288,6 +288,22 @@ a { color: inherit; text-decoration: none; }
 .contact-block .link-inline { color: var(--accent-amber); }
 .contact-block .link-inline:hover { text-decoration: underline; }
 
+.whatsapp-cta { margin-top: 20px; text-align: center; }
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #04240f;
+  border: 1px solid #25D366;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+.btn-whatsapp:hover { background: #20bd5a; }
+
 .copy-btn {
   font-family: var(--font-mono);
   font-size: 11px;
